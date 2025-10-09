@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import AppItem from './AppItem';
 import { CiSearch } from "react-icons/ci";
+import { Link } from 'react-router-dom';
+import ItemNotFound from './NotFound/ItemNotFound';
 
 function TrandingApp({ isShowMore = false, items, isLoading, count = null, title, content, showTotalResults = false, showSearch = false }) {
 
@@ -11,13 +13,16 @@ function TrandingApp({ isShowMore = false, items, isLoading, count = null, title
             console.log('ekhane ashche')
             const result = items?.slice(0, count);
             setFilter(result)
-        }else{
+        } else {
             setFilter(items)
         }
     }, [count, isLoading])
 
     const handleSearch = (e) => {
-        console.log(e.target.value)
+        const data = items?.filter((item) => {
+            return item?.title?.toLowerCase()?.includes(e.target.value?.toLowerCase());
+        })
+        setFilter(data)
     }
 
 
@@ -41,16 +46,18 @@ function TrandingApp({ isShowMore = false, items, isLoading, count = null, title
                         </div>
                     )
                 }
-                <div className={`grid grid-cols-4 gap-5 ${!showTotalResults ?  'my-14' : 'mb-14'}`}>
-                    {
-                        isLoading ? <h1>Loading</h1> : (
-                            filter?.map((item, index) => <AppItem key={index} item={item} />)
-                        )
-                    }
-                </div>
+                {
+                    filter?.length !== 0 ? <div className={`grid grid-cols-4 gap-5 ${!showTotalResults ? 'my-14' : 'mb-14'}`}>
+                        {
+                            isLoading ? <h1>Loading</h1> : (
+                                filter?.map((item, index) => <AppItem key={index} item={item} />)
+                            )
+                        }
+                    </div> : <ItemNotFound />
+                }
                 {
                     isShowMore && <div className="flex justify-center">
-                        <button className='bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] text-white py-3 px-10 rounded cursor-pointer'>Show All</button>
+                        <Link to={'/apps'} className='bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] text-white py-3 px-10 rounded cursor-pointer'>Show All</Link>
                     </div>
                 }
             </div>

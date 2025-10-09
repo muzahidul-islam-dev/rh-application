@@ -13,10 +13,10 @@ function AppItem({ item }) {
                 <h3 className='font-semibold text-[#001931] mt-3 text-[20px]'>{item?.title}</h3>
                 <div className="flex justify-between mt-3 mb-1">
                     <div className='bg-[#F1F5E8] p-1 px-2 flex gap-2 items-center text-[#00D390] rounded'>
-                        <Download className='h-[16px] w-[16px]' /> <span>{item?.downloads}</span>
+                        <Download className='h-[16px] w-[16px]' /> <span>{item?.downloads}M</span>
                     </div>
                     <div className='bg-[#FFF0E1] p-1 px-2 flex gap-2 items-center text-[#FF8811] rounded'>
-                        <FaStar className='h-[16px] w-[16px] text-[#FF8811]' /> <span>5</span>
+                        <FaStar className='h-[16px] w-[16px] text-[#FF8811]' /> <span>{item?.ratingAvg}</span>
                     </div>
                 </div>
             </div>

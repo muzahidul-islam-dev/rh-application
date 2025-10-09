@@ -19,7 +19,7 @@ function Header() {
                             <li><NavLink to={'/installed'} className={({isActive}) => `${isActive ? 'active' : ''} bg-gradient-to-r hover:from-[#632EE3]  hover:to-[#9F62F2] hover:bg-clip-text hover:text-transparent hover:border-b-2 hover:border-[#9F62F2] font-semibold`} href="#">Installation</NavLink></li>
                         </ul>
                     </nav>
-                    <button className='bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] rounded py-2 px-4 text-white text-sm flex gap-2'><img src={GitHubIcon} alt="" />Contribute</button>
+                    <button className='bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] rounded py-2 px-4 text-white text-sm flex gap-2 cursor-pointer'><img src={GitHubIcon} alt="" />Contribute</button>
                 </div>
             </div>
         </header>
