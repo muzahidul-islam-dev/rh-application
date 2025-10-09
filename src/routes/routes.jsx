@@ -5,6 +5,7 @@ import AllApplication from "../pages/AllApplication";
 import SingleApp from "../pages/SingleApp";
 import PageNotFound from "../components/NotFound/PageNotFound";
 import Installed from "../pages/Installed";
+import AppNotFound from "../components/NotFound/AppNotFound";
 
 const route = createBrowserRouter([
     {
@@ -22,7 +23,7 @@ const route = createBrowserRouter([
             {
                 path: '/app/:id',
                 element: <SingleApp />,
-                errorElement: <h3>App Not Found</h3>
+                errorElement: <AppNotFound />
             },
             {
                 path: '/installed',

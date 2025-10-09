@@ -3,6 +3,7 @@ import AppItem from './AppItem';
 import { CiSearch } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 import ItemNotFound from './NotFound/ItemNotFound';
+import Loading from './Loading';
 
 function TrandingApp({ isShowMore = false, items, isLoading, count = null, title, content, showTotalResults = false, showSearch = false }) {
 
@@ -47,13 +48,13 @@ function TrandingApp({ isShowMore = false, items, isLoading, count = null, title
                     )
                 }
                 {
-                    filter?.length !== 0 ? <div className={`grid grid-cols-4 gap-5 ${!showTotalResults ? 'my-14' : 'mb-14'}`}>
-                        {
-                            isLoading ? <h1>Loading</h1> : (
+                    isLoading ? <Loading /> : (
+                        filter?.length !== 0 ? <div className={`grid grid-cols-4 gap-5 ${!showTotalResults ? 'my-14' : 'mb-14'}`}>
+                            {
                                 filter?.map((item, index) => <AppItem key={index} item={item} />)
-                            )
-                        }
-                    </div> : <ItemNotFound />
+                            }
+                        </div> : <ItemNotFound />
+                    )
                 }
                 {
                     isShowMore && <div className="flex justify-center">
