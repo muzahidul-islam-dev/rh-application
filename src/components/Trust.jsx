@@ -3,7 +3,7 @@ import React from 'react'
 function Trust() {
     return (
         <section className='bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] py-20'>
-            <div className="max-w-[1425px] mx-auto px-5">
+            <div className="max-w-[1440px] mx-auto px-5">
                 <h3 className='text-5xl text-white font-bold text-center'>Trusted by Millions, Built for You</h3>
                 <div className="grid grid-cols-1 lg:grid-cols-3 mt-18">
                     <div className='text-center'>

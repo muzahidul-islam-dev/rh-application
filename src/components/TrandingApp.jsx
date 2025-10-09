@@ -28,7 +28,7 @@ function TrandingApp({ isShowMore = false, items, isLoading, count = null, title
 
     return (
         <section className='py-20'>
-            <div className="max-w-[1425px] mx-auto px-5">
+            <div className="max-w-[1440px] mx-auto px-5">
                 <h3 className='text-center font-bold text-5xl'>{title || 'Trending Apps'}</h3>
                 <p className='text-center text-[#627382] leading-[32px] my-4'>{content || 'Explore All Trending Apps on the Market developed by us'}</p>
                 {

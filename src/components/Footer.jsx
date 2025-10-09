@@ -8,7 +8,7 @@ import { FaFacebookF, FaStar } from "react-icons/fa";
 function Footer() {
     return (
         <div className=" bg-[#001931] mt-20">
-            <div className="max-w-[1420px] gap-5 mx-auto justify-between py-10 px-5 grid md:grid-cols-12 items-center">
+            <div className="max-w-[1440px] gap-5 mx-auto justify-between py-10 px-5 grid md:grid-cols-12 items-center">
                 <div className="col-span-3">
                     <div className="flex gap-2 items-center my-5">
                         <img src={Logo} alt="" className='h-10' />
@@ -61,7 +61,7 @@ function Footer() {
                 </div>
             </div>
             <div className="">
-                <div className="max-w-[1420px] py-5 mx-auto border-t border-gray-700">
+                <div className="max-w-[1440px] py-5 mx-auto border-t border-gray-700">
                     <p className="text-center text-[#fafafa]">Copyright © 2025 - All right reserved</p>
                 </div>
             </div>

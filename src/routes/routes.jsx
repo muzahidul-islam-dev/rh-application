@@ -3,6 +3,7 @@ import Layout from "../components/layout/Layout";
 import App from "../App";
 import AllApplication from "../pages/AllApplication";
 import SingleApp from "../pages/SingleApp";
+import PageNotFound from "../components/NotFound/PageNotFound";
 
 const route = createBrowserRouter([
     {
@@ -24,7 +25,7 @@ const route = createBrowserRouter([
             },
             {
                 path: '*',
-                element: 'Not Found'
+                element: <PageNotFound />
             }
         ]
     }

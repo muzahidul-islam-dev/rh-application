@@ -6,7 +6,7 @@ import { Link, NavLink } from 'react-router-dom'
 function Header() {
     return (
         <header className='py-5 bg-white'>
-            <div className="max-w-[1425px] mx-auto px-5">
+            <div className="max-w-[1440px] mx-auto px-5">
                 <div className="flex justify-between items-center">
                     <Link to={'/'} className="flex gap-2 items-center">
                         <img src={Logo} alt="" className='h-8' />

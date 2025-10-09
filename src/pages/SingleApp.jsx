@@ -5,6 +5,7 @@ import DownloadIcon from './../assets/icon-downloads.png'
 import IconRating from './../assets/icon-ratings.png'
 import IconReview from './../assets/icon-review.png'
 import ReviewChart from '../components/ReviewChart';
+import { toast } from 'react-toastify';
 function SingleApp() {
 
     const { id } = useParams();
@@ -67,11 +68,13 @@ function SingleApp() {
         }
         localStorage.setItem('installed', JSON.stringify(data))
         setInstalled(true)
+
+        toast.success('App Installed Successfully')
     }
 
     return (
         <div>
-            <section className="max-w-[1420px] mx-auto my-20">
+            <section className="max-w-[1440px] mx-auto my-20">
                 <div className="grid grid-cols-12 gap-7">
                     <div className="col-span-4">
                         <img src={item?.image} className='rounded' alt="" />
@@ -104,10 +107,10 @@ function SingleApp() {
                     </div>
                 </div>
             </section>
-            <section className="max-w-[1420px] mx-auto my-14">
+            <section className="max-w-[1440px] mx-auto my-14">
                 <ReviewChart ratingsData={item?.ratings} />
             </section>
-            <section className="max-w-[1420px] mx-auto">
+            <section className="max-w-[1440px] mx-auto">
                 <h3 className='text-[#001931] text-2xl font-semibold'>Description</h3>
                 <p className='text-[#627382] text-xl'>{item?.description}</p>
             </section>
