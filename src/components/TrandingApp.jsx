@@ -1,0 +1,61 @@
+import React, { useEffect, useState } from 'react'
+import AppItem from './AppItem';
+import { CiSearch } from "react-icons/ci";
+
+function TrandingApp({ isShowMore = false, items, isLoading, count = null, title, content, showTotalResults = false, showSearch = false }) {
+
+    const [filter, setFilter] = useState(items);
+
+    useEffect(() => {
+        if (isLoading === false && count !== null) {
+            console.log('ekhane ashche')
+            const result = items?.slice(0, count);
+            setFilter(result)
+        }else{
+            setFilter(items)
+        }
+    }, [count, isLoading])
+
+    const handleSearch = (e) => {
+        console.log(e.target.value)
+    }
+
+
+    return (
+        <section className='py-20'>
+            <div className="max-w-[1425px] mx-auto px-5">
+                <h3 className='text-center font-bold text-5xl'>{title || 'Trending Apps'}</h3>
+                <p className='text-center text-[#627382] leading-[32px] my-4'>{content || 'Explore All Trending Apps on the Market developed by us'}</p>
+                {
+                    (showTotalResults || showSearch) && (
+                        <div className="flex justify-between mt-14 mb-5">
+                            {
+                                showTotalResults && <h3 className='font-semibold text-2xl text-[#001931]'>({filter?.length}) Apps Found</h3>
+                            }
+                            {
+                                showSearch && <div className='relative'>
+                                    <CiSearch className='absolute text-xl top-0 bottom-0 left-3 right-full m-auto text-[#627382]' />
+                                    <input onChange={(e) => handleSearch(e)} type="text" className='border border-[#D2D2D2] text-[#627382] outline-none rounded py-1 px-5 pl-10' placeholder='Search Apps' />
+                                </div>
+                            }
+                        </div>
+                    )
+                }
+                <div className={`grid grid-cols-4 gap-5 ${!showTotalResults ?  'my-14' : 'mb-14'}`}>
+                    {
+                        isLoading ? <h1>Loading</h1> : (
+                            filter?.map((item, index) => <AppItem key={index} item={item} />)
+                        )
+                    }
+                </div>
+                {
+                    isShowMore && <div className="flex justify-center">
+                        <button className='bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] text-white py-3 px-10 rounded cursor-pointer'>Show All</button>
+                    </div>
+                }
+            </div>
+        </section>
+    )
+}
+
+export default TrandingApp

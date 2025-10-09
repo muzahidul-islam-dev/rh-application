@@ -1,0 +1,272 @@
+[
+  {
+    "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1074",
+    "title": "TaskPro",
+    "companyName": "Workly Inc.",
+    "id": 1,
+    "description": "Organize your tasks efficiently with reminders, categories, and progress tracking.",
+    "size": 45,
+    "reviews": 2340,
+    "ratingAvg": 4.6,
+    "downloads": 1500000,
+    "ratings": [
+      { "name": "1 star", "count": 120 },
+      { "name": "2 star", "count": 180 },
+      { "name": "3 star", "count": 420 },
+      { "name": "4 star", "count": 720 },
+      { "name": "5 star", "count": 900 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1170",
+    "title": "SnapEdit",
+    "companyName": "VisionWorks",
+    "id": 2,
+    "description": "A smart photo editing app with AI filters and auto enhancements.",
+    "size": 60,
+    "reviews": 5200,
+    "ratingAvg": 4.8,
+    "downloads": 2750000,
+    "ratings": [
+      { "name": "1 star", "count": 210 },
+      { "name": "2 star", "count": 310 },
+      { "name": "3 star", "count": 720 },
+      { "name": "4 star", "count": 1210 },
+      { "name": "5 star", "count": 2740 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1514575110897-1253ff7b2ccb?q=80&w=1170",
+    "title": "FinSmart",
+    "companyName": "MoneySync",
+    "id": 3,
+    "description": "Track your spending, savings, and goals with visual analytics.",
+    "size": 72,
+    "reviews": 4360,
+    "ratingAvg": 4.7,
+    "downloads": 1980000,
+    "ratings": [
+      { "name": "1 star", "count": 170 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 610 },
+      { "name": "4 star", "count": 1010 },
+      { "name": "5 star", "count": 2320 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?w=1000&h=1000",
+    "title": "Chatly",
+    "companyName": "Connectify",
+    "id": 4,
+    "description": "A private and secure messenger app with media sharing and groups.",
+    "size": 55,
+    "reviews": 8740,
+    "ratingAvg": 4.7,
+    "downloads": 4400000,
+    "ratings": [
+      { "name": "1 star", "count": 310 },
+      { "name": "2 star", "count": 420 },
+      { "name": "3 star", "count": 860 },
+      { "name": "4 star", "count": 1650 },
+      { "name": "5 star", "count": 5500 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1596742578443-7682ef5251cd?q=80&w=1000&h=1000",
+    "title": "FitTrack",
+    "companyName": "HealthSync",
+    "id": 5,
+    "description": "Track workouts, calories, and health stats with live insights.",
+    "size": 70,
+    "reviews": 6800,
+    "ratingAvg": 4.5,
+    "downloads": 2200000,
+    "ratings": [
+      { "name": "1 star", "count": 290 },
+      { "name": "2 star", "count": 390 },
+      { "name": "3 star", "count": 710 },
+      { "name": "4 star", "count": 1280 },
+      { "name": "5 star", "count": 4130 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1704018453307-d563498b585b?q=80&w=1000&h=1000",
+    "title": "Noteify",
+    "companyName": "QuickPad",
+    "id": 6,
+    "description": "Simple and elegant note app with cloud sync and markdown support.",
+    "size": 35,
+    "reviews": 2480,
+    "ratingAvg": 4.4,
+    "downloads": 1100000,
+    "ratings": [
+      { "name": "1 star", "count": 130 },
+      { "name": "2 star", "count": 190 },
+      { "name": "3 star", "count": 420 },
+      { "name": "4 star", "count": 720 },
+      { "name": "5 star", "count": 1020 }
+    ]
+  },
+  {
+    "image": "https://plus.unsplash.com/premium_photo-1728831287004-37140c46e6f6?q=80&w=1170",
+    "title": "ShopEase",
+    "companyName": "Ecomify",
+    "id": 7,
+    "description": "Discover, wishlist, and buy your favorite items from global stores.",
+    "size": 95,
+    "reviews": 7800,
+    "ratingAvg": 4.6,
+    "downloads": 3200000,
+    "ratings": [
+      { "name": "1 star", "count": 310 },
+      { "name": "2 star", "count": 470 },
+      { "name": "3 star", "count": 820 },
+      { "name": "4 star", "count": 1530 },
+      { "name": "5 star", "count": 4670 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1596558450268-9c27524ba856?q=80&w=1000&h=1000",
+    "title": "Streamy",
+    "companyName": "MediaWave",
+    "id": 8,
+    "description": "Watch and stream movies, shows, and short videos on-demand.",
+    "size": 130,
+    "reviews": 12000,
+    "ratingAvg": 4.8,
+    "downloads": 7500000,
+    "ratings": [
+      { "name": "1 star", "count": 420 },
+      { "name": "2 star", "count": 560 },
+      { "name": "3 star", "count": 970 },
+      { "name": "4 star", "count": 1910 },
+      { "name": "5 star", "count": 7140 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1730817403166-36f03bec781a?q=80&w=1000&h=1000",
+    "title": "WeatherNow",
+    "companyName": "SkySoft",
+    "id": 9,
+    "description": "Get live weather forecasts, radar maps, and storm alerts instantly.",
+    "size": 42,
+    "reviews": 4100,
+    "ratingAvg": 4.5,
+    "downloads": 1950000,
+    "ratings": [
+      { "name": "1 star", "count": 160 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 530 },
+      { "name": "4 star", "count": 980 },
+      { "name": "5 star", "count": 2180 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1730818027573-941908d279ed?q=80&w=1000&h=1000",
+    "title": "Learnify",
+    "companyName": "EduSpark",
+    "id": 10,
+    "description": "Interactive online learning app with video lessons and quizzes.",
+    "size": 115,
+    "reviews": 9100,
+    "ratingAvg": 4.9,
+    "downloads": 5100000,
+    "ratings": [
+      { "name": "1 star", "count": 250 },
+      { "name": "2 star", "count": 310 },
+      { "name": "3 star", "count": 570 },
+      { "name": "4 star", "count": 1110 },
+      { "name": "5 star", "count": 6860 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1730818875087-182c15e1e7a4?q=80&w=1000&h=1000",
+    "title": "DriveSync",
+    "companyName": "CloudSpace",
+    "id": 11,
+    "description": "Backup and sync your files, photos, and documents securely to the cloud.",
+    "size": 90,
+    "reviews": 5100,
+    "ratingAvg": 4.7,
+    "downloads": 2600000,
+    "ratings": [
+      { "name": "1 star", "count": 190 },
+      { "name": "2 star", "count": 290 },
+      { "name": "3 star", "count": 510 },
+      { "name": "4 star", "count": 1010 },
+      { "name": "5 star", "count": 3100 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1609921141835-710b7fa6e438?q=80&w=1000&h=1000",
+    "title": "Budgetly",
+    "companyName": "FinPro",
+    "id": 12,
+    "description": "A personal finance app to plan budgets and track expenses easily.",
+    "size": 68,
+    "reviews": 3890,
+    "ratingAvg": 4.4,
+    "downloads": 1850000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 230 },
+      { "name": "3 star", "count": 460 },
+      { "name": "4 star", "count": 890 },
+      { "name": "5 star", "count": 2160 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1710870509663-16f20f75d758?q=80&w=1000&h=1000",
+    "title": "MusicZone",
+    "companyName": "TuneLabs",
+    "id": 13,
+    "description": "Listen to and download your favorite tracks with AI-curated playlists.",
+    "size": 105,
+    "reviews": 6400,
+    "ratingAvg": 4.7,
+    "downloads": 3500000,
+    "ratings": [
+      { "name": "1 star", "count": 230 },
+      { "name": "2 star", "count": 340 },
+      { "name": "3 star", "count": 710 },
+      { "name": "4 star", "count": 1280 },
+      { "name": "5 star", "count": 3840 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1600783245357-dae0e49605aa?q=80&w=1000&h=1000",
+    "title": "Foodify",
+    "companyName": "TasteTech",
+    "id": 14,
+    "description": "Find nearby restaurants, browse menus, and order food online.",
+    "size": 95,
+    "reviews": 9100,
+    "ratingAvg": 4.8,
+    "downloads": 6700000,
+    "ratings": [
+      { "name": "1 star", "count": 330 },
+      { "name": "2 star", "count": 490 },
+      { "name": "3 star", "count": 830 },
+      { "name": "4 star", "count": 1630 },
+      { "name": "5 star", "count": 5820 }
+    ]
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1730817403334-d723c05591e6?q=80&w=1000&h=1000",
+    "title": "Newsify",
+    "companyName": "DailyPress",
+    "id": 15,
+    "description": "Stay updated with breaking news, trending stories, and personalized feeds.",
+    "size": 56,
+    "reviews": 3750,
+    "ratingAvg": 4.5,
+    "downloads": 1580000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 220 },
+      { "name": "3 star", "count": 470 },
+      { "name": "4 star", "count": 910 },
+      { "name": "5 star", "count": 2000 }
+    ]
+  }
+]
