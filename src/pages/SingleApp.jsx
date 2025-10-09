@@ -25,7 +25,7 @@ function SingleApp() {
 
         const storedItems = localStorage.getItem('installed');
         const storedData = JSON.parse(storedItems)?.find(item => item.id == id);
-        if(storedData){
+        if (storedData) {
             setInstalled(true)
         }
     }, [id, loading])
@@ -56,20 +56,23 @@ function SingleApp() {
 
     const handleInstall = (item) => {
         const previouseItem = localStorage.getItem('installed');
-        console.log(previouseItem)
+        console.log(previouseItem);
+
         let data;
         if (previouseItem !== null) {
+            const parsedData = JSON.parse(previouseItem);
             data = [
-                ...previouseItem,
+                ...parsedData,
                 item
-            ]
-        }else{
+            ];
+        } else {
             data = [item];
         }
-        localStorage.setItem('installed', JSON.stringify(data))
-        setInstalled(true)
 
-        toast.success('App Installed Successfully')
+        console.log(data);
+        localStorage.setItem('installed', JSON.stringify(data));
+        setInstalled(true)
+        toast.success('App Installed Successfully');
     }
 
     return (
