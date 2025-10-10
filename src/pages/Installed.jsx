@@ -34,8 +34,8 @@ function Installed() {
     };
     return (
         <div>
-            <div className="max-w-[1440px] mx-auto my-32">
-                <h3 className='text-center font-bold text-5xl'>Your Installed Apps</h3>
+            <div className="max-w-[1440px] mx-auto my-32 px-2">
+                <h3 className='text-center font-bold text-4xl md:text-5xl'>Your Installed Apps</h3>
                 <p className='text-xl text-[#627382] text-center my-5'>Explore All Trending Apps on the Market developed by us</p>
                 <div className="flex justify-between">
                     <h3 className='text-2xl text-[#001931] font-semibold'>{installed?.length} Apps Found</h3>
@@ -51,10 +51,10 @@ function Installed() {
                     {
                         installed?.map((singleItem, index) => (
                             <div key={index} className='bg-white rounded py-3 px-3 grid grid-cols-12 gap-5 my-3 items-center'>
-                                <div className='col-span-1'>
+                                <div className='col-span-12 md:col-span-2 lg:col-span-1'>
                                     <img src={singleItem?.image} className='rounded w-full' alt="" />
                                 </div>
-                                <div className="col-span-11 flex justify-between items-center">
+                                <div className="col-span-12 md:col-span-10 lg:col-span-11 flex justify-between items-center">
                                     <div>
                                         <h3 className='text-[#001931] text-xl font-medium'>Forest: Focus for Productivity</h3>
                                         <div className="flex gap-3">

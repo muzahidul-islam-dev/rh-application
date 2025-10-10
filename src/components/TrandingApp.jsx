@@ -34,15 +34,14 @@ function TrandingApp({ isShowMore = false, items, isLoading, count = null, title
         })
     }
 
-    console.log(loading, 'test loading')
     return (
         <section className='py-20'>
             <div className="max-w-[1440px] mx-auto px-5">
-                <h3 className='text-center font-bold text-5xl'>{title || 'Trending Apps'}</h3>
+                <h3 className='text-center font-bold text-4xl md:text-5xl'>{title || 'Trending Apps'}</h3>
                 <p className='text-center text-[#627382] leading-[32px] my-4'>{content || 'Explore All Trending Apps on the Market developed by us'}</p>
                 {
                     (showTotalResults || showSearch) && (
-                        <div className="flex justify-between mt-14 mb-5">
+                        <div className="grid gap-5 md:flex md:justify-between mt-14 mb-5">
                             {
                                 showTotalResults && <h3 className='font-semibold text-2xl text-[#001931]'>({filter?.length}) Apps Found</h3>
                             }
@@ -57,7 +56,7 @@ function TrandingApp({ isShowMore = false, items, isLoading, count = null, title
                 }
                 {
                     (isLoading || loading) ? <Loading /> : (
-                        filter?.length !== 0 ? <div className={`grid grid-cols-4 gap-5 ${!showTotalResults ? 'my-14' : 'mb-14'}`}>
+                        filter?.length !== 0 ? <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ${!showTotalResults ? 'my-14' : 'mb-14'}`}>
                             {
                                 filter?.map((item, index) => <AppItem key={index} item={item} />)
                             }

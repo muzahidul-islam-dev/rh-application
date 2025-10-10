@@ -56,7 +56,6 @@ function SingleApp() {
 
     const handleInstall = (item) => {
         const previouseItem = localStorage.getItem('installed');
-        console.log(previouseItem);
 
         let data;
         if (previouseItem !== null) {
@@ -69,7 +68,6 @@ function SingleApp() {
             data = [item];
         }
 
-        console.log(data);
         localStorage.setItem('installed', JSON.stringify(data));
         setInstalled(true)
         toast.success('App Installed Successfully');
@@ -77,32 +75,32 @@ function SingleApp() {
 
     return (
         <div>
-            <section className="max-w-[1440px] mx-auto my-20">
+            <section className="max-w-[1440px] mx-auto my-20 px-2">
                 <div className="grid grid-cols-12 gap-7">
-                    <div className="col-span-4">
-                        <img src={item?.image} className='rounded' alt="" />
+                    <div className="col-span-12 lg:col-span-4">
+                        <img src={item?.image} className='rounded w-1/2 lg:w-full' alt="" />
                     </div>
-                    <div className="col-span-8">
+                    <div className="col-span-12 lg:col-span-8">
                         <h3 className='text-3xl font-bold text-[#001931]'>{item?.title}</h3>
                         <p className='text-[#627382] my-2 pb-5 text-xl border-b border-[#001931]/20'>Developed by <span className='font-semibold bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent'>{item?.companyName}</span></p>
-                        <div className="flex gap-18 my-10">
+                        <div className="flex gap-5 justify-center md:justify-start lg:gap-18 my-10">
                             <div>
-                                <img src={DownloadIcon} className='h-10 w-10' alt="" />
+                                <img src={DownloadIcon} className='h-7 md:h-10 w-7 md:w-10' alt="" />
                                 <span className='text-[#001931] my-1 inline-block'>Downloads</span>
-                                <h3 className='font-extrabold text-4xl'>{item?.downloads}M</h3>
+                                <h3 className='font-extrabold text-xl md:text-3xl lg:text-4xl'>{item?.downloads}M</h3>
                             </div>
                             <div>
                                 <img src={IconRating} className='h-10 w-10' alt="" />
                                 <span className='text-[#001931] my-1 inline-block'>Average Ratings</span>
-                                <h3 className='font-extrabold text-4xl'>{item?.ratingAvg}</h3>
+                                <h3 className='font-extrabold text-xl md:text-3xl lg:text-4xl'>{item?.ratingAvg}</h3>
                             </div>
                             <div>
                                 <img src={IconReview} className='h-10 w-10' alt="" />
                                 <span className='text-[#001931] my-1 inline-block'>Total Reviews</span>
-                                <h3 className='font-extrabold text-4xl'>{formatPrice(countRating(item?.ratings))}</h3>
+                                <h3 className='font-extrabold text-xl md:text-3xl lg:text-4xl'>{formatPrice(countRating(item?.ratings))}</h3>
                             </div>
                         </div>
-                        <button className={`bg-[#00D390] py-3 px-5 rounded text-white text-xl ${installed ? 'cursor-not-allowed' : 'cursor-pointer'}`} disabled={installed} onClick={() => handleInstall(item)}>
+                        <button className={`bg-[#00D390] py-3 px-5 w-full md:w-max rounded text-white text-xl ${installed ? 'cursor-not-allowed' : 'cursor-pointer'}`} disabled={installed} onClick={() => handleInstall(item)}>
                             {
                                 installed ? 'Installed' : `Install Now (${item?.size} MB)`
                             }
@@ -110,10 +108,10 @@ function SingleApp() {
                     </div>
                 </div>
             </section>
-            <section className="max-w-[1440px] mx-auto my-14">
+            <section className="max-w-[1440px] mx-auto my-14 px-2">
                 <ReviewChart ratingsData={item?.ratings} />
             </section>
-            <section className="max-w-[1440px] mx-auto">
+            <section className="max-w-[1440px] mx-auto px-2">
                 <h3 className='text-[#001931] text-2xl font-semibold'>Description</h3>
                 <p className='text-[#627382] text-xl'>{item?.description}</p>
             </section>

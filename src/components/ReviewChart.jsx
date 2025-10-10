@@ -59,7 +59,6 @@ const ReviewChart = ({ ratingsData }) => {
         totalreview: item?.count,
     }));
 
-    console.log(filterData, 'review chart');
 
     return (
         <div className='border-y border-gray-300 py-14'>
