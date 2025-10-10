@@ -3,20 +3,38 @@ import React, { useEffect, useState } from 'react'
 import { FaStar } from 'react-icons/fa';
 import { TiArrowSortedDown } from "react-icons/ti";
 import { toast } from 'react-toastify';
+import Loading from '../components/Loading';
 
 function Installed() {
     const [installed, setInstalled] = useState([]);
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
         const localData = localStorage.getItem('installed')
         const result = JSON.parse(localData)
-        setInstalled(result);
+        setInstalled(result?.sort((a, b) => b.downloads - a.downloads));
+        setLoading(false)
     }, [])
     const handleUnistall = (itemId) => {
         const localData = JSON.parse(localStorage.getItem('installed'))
         const updateData = localData?.filter((item) => item?.id != itemId)
         localStorage.setItem('installed', JSON.stringify(updateData))
-        setInstalled(updateData)
+        setInstalled(updateData?.sort((a, b) => b.downloads - a.downloads))
         toast.success('Unistall Successfully')
+    }
+
+    const handleSortPrice = (e) => {
+        let sorted = [
+            ...installed
+        ];
+        if (e.target.value === 'low_to_high') {
+            sorted.sort((a, b) => a.downloads - b.downloads);
+        } else if (e.target.value === 'high_to_low') {
+            sorted.sort((a, b) => b.downloads - a.downloads);
+        }
+        setInstalled(sorted);
+    };
+    if(loading){
+        return <Loading />
     }
     return (
         <div>
@@ -27,9 +45,9 @@ function Installed() {
                     <h3 className='text-2xl text-[#001931] font-semibold'>1 Apps Found</h3>
                     <div className="relative">
                         <TiArrowSortedDown className='absolute top-0 bottom-0 right-2 m-auto text-gray-700 text-2xl' />
-                        <select name="" className='appearance-none border border-gray-300 py-2 px-4 pr-8 rounded focus:outline-0' id="">
-                            <option value="heigh">Sort By Size</option>
-                            <option value="low">Low</option>
+                        <select onChange={(e) => handleSortPrice(e)} name="" className='appearance-none border border-gray-300 py-2 px-4 pr-8 rounded focus:outline-0' id="">
+                            <option value="high_to_low">High-Low</option>
+                            <option value="low_to_high">Low-High</option>
                         </select>
                     </div>
                 </div>
