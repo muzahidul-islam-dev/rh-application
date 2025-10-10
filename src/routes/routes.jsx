@@ -1,11 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import App from "../App";
-import AllApplication from "../pages/AllApplication";
 import SingleApp from "../pages/SingleApp";
 import PageNotFound from "../components/NotFound/PageNotFound";
 import Installed from "../pages/Installed";
 import AppNotFound from "../components/NotFound/AppNotFound";
+import { lazy } from "react";
+
+const AllApplication = lazy(() => import("../pages/AllApplication"))
 
 const route = createBrowserRouter([
     {
@@ -23,7 +25,8 @@ const route = createBrowserRouter([
             {
                 path: '/app/:id',
                 element: <SingleApp />,
-                errorElement: <AppNotFound />
+                errorElement: <AppNotFound />,
+                
             },
             {
                 path: '/installed',

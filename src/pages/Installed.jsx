@@ -7,18 +7,17 @@ import Loading from '../components/Loading';
 
 function Installed() {
     const [installed, setInstalled] = useState([]);
-    const [loading, setLoading] = useState(true)
+    // const [loading, setLoading] = useState(true)
     useEffect(() => {
         const localData = localStorage.getItem('installed')
         const result = JSON.parse(localData)
         setInstalled(result?.sort((a, b) => b.downloads - a.downloads));
-        setLoading(false)
     }, [])
     const handleUnistall = (itemId) => {
         const localData = JSON.parse(localStorage.getItem('installed'))
         const updateData = localData?.filter((item) => item?.id != itemId)
         localStorage.setItem('installed', JSON.stringify(updateData))
-        setInstalled(updateData?.sort((a, b) => b.downloads - a.downloads))
+        setInstalled(updateData)
         toast.success('Unistall Successfully')
     }
 
@@ -33,16 +32,13 @@ function Installed() {
         }
         setInstalled(sorted);
     };
-    if(loading){
-        return <Loading />
-    }
     return (
         <div>
             <div className="max-w-[1440px] mx-auto my-32">
                 <h3 className='text-center font-bold text-5xl'>Your Installed Apps</h3>
                 <p className='text-xl text-[#627382] text-center my-5'>Explore All Trending Apps on the Market developed by us</p>
                 <div className="flex justify-between">
-                    <h3 className='text-2xl text-[#001931] font-semibold'>1 Apps Found</h3>
+                    <h3 className='text-2xl text-[#001931] font-semibold'>{installed?.length} Apps Found</h3>
                     <div className="relative">
                         <TiArrowSortedDown className='absolute top-0 bottom-0 right-2 m-auto text-gray-700 text-2xl' />
                         <select onChange={(e) => handleSortPrice(e)} name="" className='appearance-none border border-gray-300 py-2 px-4 pr-8 rounded focus:outline-0' id="">

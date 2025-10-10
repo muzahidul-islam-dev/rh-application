@@ -8,25 +8,33 @@ import Loading from './Loading';
 function TrandingApp({ isShowMore = false, items, isLoading, count = null, title, content, showTotalResults = false, showSearch = false }) {
 
     const [filter, setFilter] = useState(items);
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         if (isLoading === false && count !== null) {
-            console.log('ekhane ashche')
             const result = items?.slice(0, count);
             setFilter(result)
         } else {
             setFilter(items)
         }
+
+        setLoading(false)
     }, [count, isLoading])
 
     const handleSearch = (e) => {
-        const data = items?.filter((item) => {
-            return item?.title?.toLowerCase()?.includes(e.target.value?.toLowerCase());
+
+
+        setLoading(true)
+        fetch(`/data.json`).then(res => res.json()).then(resposne => {
+            setLoading(false)
+            const data = resposne?.filter((item) => {
+                return item?.title?.toLowerCase()?.includes(e.target.value?.toLowerCase());
+            })
+            setFilter(data)
         })
-        setFilter(data)
     }
 
-
+    console.log(loading, 'test loading')
     return (
         <section className='py-20'>
             <div className="max-w-[1440px] mx-auto px-5">
@@ -48,7 +56,7 @@ function TrandingApp({ isShowMore = false, items, isLoading, count = null, title
                     )
                 }
                 {
-                    isLoading ? <Loading /> : (
+                    (isLoading || loading) ? <Loading /> : (
                         filter?.length !== 0 ? <div className={`grid grid-cols-4 gap-5 ${!showTotalResults ? 'my-14' : 'mb-14'}`}>
                             {
                                 filter?.map((item, index) => <AppItem key={index} item={item} />)
