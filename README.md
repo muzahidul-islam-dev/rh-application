@@ -6,6 +6,11 @@
 Hero Store is a modern, responsive e-commerce web application designed to provide a seamless shopping experience. It features a clean UI, easy product browsing, and smooth checkout flow to help users find and purchase products effortlessly.
 
 ---
+## Screenshot
+
+![Screenshot](https://github.com/muzahidul-islam-dev/rh-application/blob/main/screenshot.png)
+
+---
 
 ## Live Demo  
 Check out the live version here:  
